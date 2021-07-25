@@ -12,7 +12,7 @@ def bubblesort(li):
             li[i], li[i+1] = li[i+1], li[i]
     return li
   
-#합병정렬
+#합병정렬1
 def mergesort(li):
     if len(li) == 1:                     #길이가 1이면 리턴
         return li
@@ -82,7 +82,36 @@ def sort_merge(li):
         elif cnt2 == len(result2):
             result3 += result1[cnt1:]
         return result3
- 
+#합병정렬3
+from copy import copy
+def mergesort(li, n):
+    sub_li = copy(li)                                      #copy   #추가배열이 든다는 단점  #수업내용토대로 짠 코드
+    if n == 1:
+        return li
+    elif n == 2:
+        if sub_li[0] > sub_li[1]:
+            sub_li[0], sub_li[1] = sub_li[1], sub_li[0]
+            return sub_li
+        else:
+            return sub_li
+    else:
+        h = n//2
+        sub_li[:h], sub_li[h:] = mergesort(sub_li[:h], h), mergesort(sub_li[h:],n-h)
+        leftindex, rightindex = 0, 0
+        cnt =  0   #li에 넣을 위치
+        while(leftindex < h and rightindex < n-h):
+            if sub_li[leftindex] > sub_li[h:][rightindex]:
+                li[cnt] = sub_li[h:][rightindex]
+                rightindex += 1
+            elif sub_li[leftindex] < sub_li[h:][rightindex]:
+                li[cnt] = sub_li[leftindex]
+                leftindex += 1
+            cnt+=1
+        if leftindex == h:
+            li[cnt:] = sub_li[h:][rightindex:]
+        elif rightindex == n-h:
+            li[cnt:] = sub_li[leftindex:h]
+        return li 
 from random import *
 #퀵정렬1
 def quicksort(li, pivot):
