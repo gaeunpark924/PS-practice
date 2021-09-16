@@ -1,18 +1,21 @@
 #한수
+#https://www.acmicpc.net/problem/1065
+#한수: 양의 정수의 각 자리가 등차수열을 이루는 수 ex) 123, 321
+#입력: 1000보다 작거나 같은 수
 def han_number(x):
     #자릿수 구하기
     s1,s2 = x//10,x%10
     t1,t2 = s1//10,s1%10
     i1,i2 = t1//10,t1%10
     #한수인지 확인
-    if x > 100 and x < 1000:
+    if x > 100 and x < 1000:      #100 초과, 1000 미만이면 계산
         if t2-s2 == i2-t2:
             return 1
         else:
             return 0
-    elif x == 1000 or x == 100:
+    elif x == 1000 or x == 100:   #1000, 100일 때 예외처리
         return 0
-    else:
+    else:                         #십의 자리수는 모두 한수
         return 1
 def solution(a):
     cnt = 0
@@ -25,9 +28,10 @@ a = int(input())
 print(solution(a))
 
 #분해합
+#https://www.acmicpc.net/problem/2231
+#245의 분해합은 256(=245+2+4+5)이다. 245는 256의 생성자라고 한다
 def solution(n):
     #분해합
-    #245의 분해합은 256(=245+2+4+5)이다. 245는 256의 생성자라고 한다
     result = 0
     for i in range(1,n):
         new_i = i
@@ -43,6 +47,7 @@ N = int(input())
 print(solution(N))
 
 #블랙잭
+#https://www.acmicpc.net/problem/2798
 from itertools import combinations
 #N개의 카드에서 3장을 뽑아 M이 넘지 않는 수가 되게 하기
 def solution(n,m,num_card):
