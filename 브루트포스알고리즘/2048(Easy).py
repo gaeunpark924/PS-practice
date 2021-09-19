@@ -65,13 +65,21 @@ def search(board, move, cnt):
     elif move == 'right':
         new_board = right(a,board)
     elif move == 'up':
-        board = deque(T(list(board)))
-        new_board = left(a,board)
-        new_board = deque(T(list(new_board)))
+        #전치행렬을 직접 구현
+        #board = deque(T(list(board)))
+        #new_board = left(a,board)
+        #new_board = deque(T(list(new_board)))
+        #zip 함수를 사용하면 더 빠르게 할 수 있음 zip(*A) A 를 전치시켜준다
+        new_board = left(a,deque(zip(*list(board))))
+        new_board = deque(zip(*list(new_board))) 
     elif move == 'down':
-        board = deque(T(list(board)))
-        new_board = right(a,board)
-        new_board = deque(T(list(new_board)))
+        #직접 구현
+        #board = deque(T(list(board)))
+        #new_board = right(a,board)
+        #new_board = deque(T(list(new_board)))
+        #zip
+        new_board = right(a,deque(zip(*list(board))))
+        new_board = deque(zip(*list(new_board)))
     cnt += 1
     x = search(new_board, 'left', cnt)
     y = search(new_board, 'right', cnt)
