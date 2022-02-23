@@ -15,6 +15,7 @@ def isPalindrome(pe, n):
                 left = strX[start]
                 right = strX[end]
                 if left != right:
+                    #유사회문. start가 없는 경우, end가 없는 경우 둘 다 계산
                     tmp1 = strX[:start] + strX[start+1:]
                     if tmp1 == tmp1[::-1]:  #유사회문
                         result = 1
