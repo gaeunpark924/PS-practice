@@ -56,7 +56,7 @@ def string_game(w,k):
     max_str = 0
     for idx_list in string_num.values():
         for j in range(len(idx_list)-(k-1)):
-            tmp = idx_list[j+k-1]-idx_list[j]+1  #3번, 4번 조건 동시에 충족하는 코드 이게 핵심*
+            tmp = idx_list[j+k-1]-idx_list[j]+1  ##3번, 4번 조건 동시에 충족하는 코드. j 부터 j + k-1 까지
             if tmp < min_str:
                 min_str = tmp
             if tmp > max_str:
