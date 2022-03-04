@@ -17,8 +17,7 @@ for value in combinations(height,7):
 #백준 1929번 소수 구하기
 #https://www.acmicpc.net/problem/1929
 #처음 푼 풀이
-#소수의 정의를 이용해서 2부터 모든 수를 나누고 나머지가 0 이면 소수가 아니라고 판별했다.
-#모든 경우의 수를 계산하므로 당연히 시간초과가 발생한다.
+#소수의 정의를 이용해서 2부터 모든 수를 나누고 나머지가 0 이면 소수가 아니라고 판별했다. -> 시간초과
 import sys
 def getPrimeNumber(m, n):
     for i in range(m,n+1):
