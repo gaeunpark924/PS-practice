@@ -2,7 +2,7 @@
 ## 레파지토리 설명
 코딩테스트에 대비하기 위해 백준, 프로그래머스의 문제를 풀고 풀이를 올리는 레파지토리입니다.
 
-## 지금까지 푼 문제
+### 지금까지 푼 문제
 - [BFS/DFS](https://github.com/gaeunpark924/Coding_Test_Study/tree/main/DFS_BFS)
 - DP
 - [정렬](https://github.com/gaeunpark924/Coding_Test_Study/blob/main/%EC%88%98%20%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B01%2C2.py)
