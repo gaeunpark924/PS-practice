@@ -1,3 +1,4 @@
+- [Interpretor 방식](#Interpretor-방식)
 ## 레파지토리 설명
 코딩테스트에 대비하기 위해 백준, 프로그래머스의 문제를 풀고 풀이를 올리는 레파지토리입니다.
 
@@ -15,3 +16,14 @@
 
 ## 규칙
 - 한 주에 최소 2문제 업로드
+
+## 📌Interpretor 방식
+- 소스코드를 기계어로 변역하는 과정 없이 코드를 실행 시점에(코드 한 줄씩) 해석해 컴퓨터가 처리할 수 있도록 함. 간단히 작성 가능하고 메모리를 적게 필요로 하지만 실행속도가 느리다.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/51811995/156788504-d668d845-2141-4a6f-bb8d-c42818697a2f.png" width=400>
+</p>
+
+- 위 방식외에도 컴파일러로 중간 코드인 바이트코드로 만들고 이것을 다시 인터프리터 방식으로 해석해 수행하는 방법도 파이썬에서 종종 사용됨
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/51811995/156791134-73cd62df-785d-4c44-8f85-b153211ab778.png" width=600>
+</p>
