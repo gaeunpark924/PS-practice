@@ -27,3 +27,9 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/51811995/156791134-73cd62df-785d-4c44-8f85-b153211ab778.png" width=600>
 </p>
+
+## 📌GIL
+- Global Interpreter Lock, 전역 인터프리터 락
+- 초창기 파이썬은 동시성과 메모리 관리를 쉽게하기 위해 thread-safe하게 설계되었다.
+- 파이썬 객체로의 접근을 제한해 race condition을 막는 mutex를 GIL이라고 한다.
+- 파이썬이 다른 코테 언어보다 느린 이유가 GIL 으로 인해 멀티 코어임에도 하나의 스레드가 자원을 독점하는 형태로 실행되기 때문이라고 한다.
