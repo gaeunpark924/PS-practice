@@ -23,7 +23,7 @@
   <img src="https://user-images.githubusercontent.com/51811995/156788504-d668d845-2141-4a6f-bb8d-c42818697a2f.png" width=400>
 </p>
 
-- 위 방식외에도 컴파일러로 중간 코드인 바이트코드로 만들고 이것을 다시 인터프리터 방식으로 해석해 수행하는 방법도 파이썬에서 종종 사용됨
+- 위 방식외에도 컴파일러로 중간 코드인 바이트코드로 만들고 이것을 다시 인터프리터 방식으로 해석해 수행하는 방법도 파이썬에서 종종 사용된다.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/51811995/156791134-73cd62df-785d-4c44-8f85-b153211ab778.png" width=600>
 </p>
