@@ -1,23 +1,26 @@
-- [Interpretor 방식](#Interpretor-방식)
+- [Interpretor](#Interpretor)
+- [GIL](#GIL)
 ## 레파지토리 설명
 코딩테스트에 대비하기 위해 백준, 프로그래머스의 문제를 풀고 풀이를 올리는 레파지토리입니다.
 
 ### 지금까지 푼 문제
-- [BFS/DFS](https://github.com/gaeunpark924/Coding_Test_Study/tree/main/DFS_BFS)
+- BFS/DFS
 - DP
-- [정렬](https://github.com/gaeunpark924/Coding_Test_Study/blob/main/%EC%88%98%20%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B01%2C2.py)
+- 정렬
 - 스택/큐
 - 구현
-- [그리디](https://github.com/gaeunpark924/Coding_Test_Study/tree/main/%EA%B7%B8%EB%A6%AC%EB%94%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
-- [브루트포스](https://github.com/gaeunpark924/Coding_Test_Study/tree/main/%EB%B8%8C%EB%A3%A8%ED%8A%B8%ED%8F%AC%EC%8A%A4%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+- 그리디
+- 브루트포스
+- 문자열
 
 ### 앞으로 해야 할 것
 - [ ] 한 번 푼 문제들 효율성에 유의하여 다시 풀기
 
-### 규칙
-- 한 주에 최소 2문제 업로드
+### 규칙(1/1~)
+- 1일 1문제(1월 3주차 부터 2월 3주차까지 사이드 프로젝트에 참여하게 되어서 지키지 못했음)
+- 하루에 두 가지 유형의 문제 1개씩 풀기(3월 3주차 부터 폴더에 유형 표시X) 
 
-## 📌Interpretor 방식
+## 📌Interpretor
 - 소스코드를 기계어로 변역하는 과정 없이 코드를 실행 시점에(코드 한 줄씩) 해석해 컴퓨터가 처리할 수 있도록 함. 간단히 작성 가능하고 메모리를 적게 필요로 하지만 실행속도가 느리다.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/51811995/156788504-d668d845-2141-4a6f-bb8d-c42818697a2f.png" width=400>
