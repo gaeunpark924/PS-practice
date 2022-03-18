@@ -2,32 +2,40 @@
 #예전에 한 번 푼 문제였는데 다시 풀으니까 못 풀겠음
 #-로 split하고 + 계산
 #그 이후에는 그냥 순서대로 - 를 계산해주면 되는 거였음
-def threeNum(li,MINMAX):
-    if MINMAX == 'mn':
-        return min((li[0]-li[1])-li[2],li[0]-(li[1]-li[2]))
-    elif MINMAX == 'mx':
-        return max((li[0]-li[1])-li[2],li[0]-(li[1]-li[2]))
-def bracketGreedy(bracket):
-    bracket_li = bracket.split('-')
-    if len(bracket_li) == 1:
-        return sum(map(int, bracket.split('+')))
-    elif len(bracket_li) == 2:
-        return sum(map(int, bracket_li[0].split('+'))) - sum(map(int, bracket_li[1].split('+')))
-    else:
-        sum_li = []
-        for value in bracket_li:
-            sum_li.append(sum(map(int, value.split('+'))))
-        if len(sum_li)%2 == 0:
-            tmp = 'mn'
-        else:
-            tmp = 'mx'
-        for i in range(len(sum_li)-1,1,-2):
-            sum_li[i-2] = threeNum(list(map(int, sum_li[i-2:i+1])),tmp)
-            if tmp == 'mn':
-                tmp = 'mx'
-            else:
-                tmp = 'mn'
-        return sum_li[0]
+a = input()
+new_str = a.split('-')
+for i in range(len(new_str)):
+    x = list(map(int, new_str[i].split('+')))
+    new_str[i] = sum(x)
+for j in range(1,len(new_str)):
+    new_str[j] = new_str[j-1]-new_str[j]
+print(new_str[-1])
+# def threeNum(li,MINMAX):
+#     if MINMAX == 'mn':
+#         return min((li[0]-li[1])-li[2],li[0]-(li[1]-li[2]))
+#     elif MINMAX == 'mx':
+#         return max((li[0]-li[1])-li[2],li[0]-(li[1]-li[2]))
+# def bracketGreedy(bracket):
+#     bracket_li = bracket.split('-')
+#     if len(bracket_li) == 1:
+#         return sum(map(int, bracket.split('+')))
+#     elif len(bracket_li) == 2:
+#         return sum(map(int, bracket_li[0].split('+'))) - sum(map(int, bracket_li[1].split('+')))
+#     else:
+#         sum_li = []
+#         for value in bracket_li:
+#             sum_li.append(sum(map(int, value.split('+'))))
+#         if len(sum_li)%2 == 0:
+#             tmp = 'mn'
+#         else:
+#             tmp = 'mx'
+#         for i in range(len(sum_li)-1,1,-2):
+#             sum_li[i-2] = threeNum(list(map(int, sum_li[i-2:i+1])),tmp)
+#             if tmp == 'mn':
+#                 tmp = 'mx'
+#             else:
+#                 tmp = 'mn'
+#         return sum_li[0]
 #다른 풀이
 #최초로 - 가 나오면 그 뒤는 - 로 계산하면 됨
 def bracketGreedy(bracket):
