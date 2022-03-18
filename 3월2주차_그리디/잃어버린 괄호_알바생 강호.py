@@ -28,6 +28,19 @@ def bracketGreedy(bracket):
             else:
                 tmp = 'mn'
         return sum_li[0]
+#다른 풀이
+#최초로 - 가 나오면 그 뒤는 - 로 계산하면 됨
+def bracketGreedy(bracket):
+    result = 0
+    s = bracket.split('-')
+    for value in s[0].split('+'):
+        result += int(value)
+    if len(s) == 1:      # - 가 없으면 그냥 return 한다. 없어도 s[1:]는 [] 이어서 오류는 발생하지 않는다. 
+        return result
+    for i in s[1:]:
+        for j in i.split('+'):
+            result -= int(j)
+    return result
 bracket = input()
 print(bracketGreedy(bracket))
 
