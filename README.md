@@ -16,3 +16,5 @@
 
 ### 다시 푼 문제
 - [1541](https://github.com/gaeunpark924/CT-practice/blob/main/3%EC%9B%942%EC%A3%BC%EC%B0%A8_%EA%B7%B8%EB%A6%AC%EB%94%94/%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EA%B4%84%ED%98%B8_%EC%95%8C%EB%B0%94%EC%83%9D%20%EA%B0%95%ED%98%B8.py)
+
+> 3월 3주차 이후부터 폴더에 알고리즘 유형 기재 X
