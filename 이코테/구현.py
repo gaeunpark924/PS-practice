@@ -31,12 +31,13 @@ n = 5
 print(solution(n))
 
 #왕실의 나이트
+#시뮬레이션
 def solution(night):
     answer = 0
-    nxny = [[-2,-1],[-2,1],[-1,-2],[-1,2],[1,-2],[1,2],[2,-1],[2,1]]
+    steps = [(-2,-1),(-2,1),(-1,-2),(-1,2),(1,-2),(1,2),(2,-1),(2,1)]
     r = int(night[1])
     c = int(ord(night[0])) - int(ord('a')) + 1
-    for xy in nxny:
+    for xy in steps:
         if 1 <= r+xy[0] <= 8 and 1 <= c+xy[1] <= 8:
             answer += 1
     return answer
@@ -70,27 +71,3 @@ n, m = 4, 4
 r, c, d = 1, 1, 0
 game_map = [[1,1,1,1],[1,0,0,1],[1,1,0,1],[1,1,1,1]]
 print(solution(n,m,r,c,d,game_map))
-
-# def solution(n,m,r,c,d,game_map):
-#     answer = 0
-#     left_turn = [[0,-1],[-1,0],[0,1],[1,0]]
-#     back = [[1,0],[0,-1],[-1,0],[0,1]]
-#     direction = [3, 0, 1, 2]
-#     cnt = 0
-#     while 1:
-#         new_r = r + left_turn[d][0]
-#         new_c = c + left_turn[d][1]
-#         if game_map[new_r][new_c] == 2 or game_map[new_r][new_c] == 1:
-#             cnt += 1
-#             if cnt == 4:
-#                 r += back[d][0]
-#                 c += back[d][1]
-#                 if game_map[r][c] == 2:
-#                     break
-#         else:
-#             cnt = 0
-#             answer += 1
-#             r, c = new_r, new_c
-#             game_map[r][c] = 2
-#         d = direction[d]
-#     return answer
